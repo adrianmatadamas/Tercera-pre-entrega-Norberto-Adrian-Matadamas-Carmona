@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Buscar Productos - Tienda de Ropa
+{% endblock %}
+
+{% block content %}
+    {{ block.super }} <!-- Incluye el contenido del bloque 'content' de la plantilla base -->
+
+    <h3>Buscar Productos</h3>
+    <form method="GET" action="{% url 'buscar_productos' %}">
+        <!-- Aquí puedes agregar tus campos de búsqueda -->
+        <input type="text" name="q" placeholder="Buscar...">
+        <button type="submit">Buscar</button>
+    </form>
+    <!-- Aquí puedes mostrar los resultados de la búsqueda si lo deseas -->
+{% endblock %}

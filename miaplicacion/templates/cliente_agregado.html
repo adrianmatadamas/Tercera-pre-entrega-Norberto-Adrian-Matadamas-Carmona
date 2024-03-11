@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Cliente Agregado - Tienda de Ropa
+{% endblock %}
+
+{% block content %}
+    {{ block.super }} <!-- Incluye el contenido del bloque 'content' de la plantilla base -->
+
+    <h3>Cliente Agregado</h3>
+    <p>El cliente ha sido agregado exitosamente.</p>
+    <a href="{% url 'agregar_cliente' %}">Agregar otro cliente</a>
+{% endblock %}

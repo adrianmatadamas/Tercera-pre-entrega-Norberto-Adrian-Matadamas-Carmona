@@ -1,0 +1,50 @@
+{% load static %}
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Sitio Web{% endblock %}</title>
+    <!-- Aquí puedes incluir tus estilos CSS, scripts JavaScript, etc. -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Aquí puedes incluir tu encabezado común -->
+        <h1>Tienda de Ropa - Proyecto Web Django</h1>
+    </header>
+    <nav>
+        <!-- Aquí puedes incluir tu navegación común -->
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/agregar-categoria/">Agregar Categoría</a></li>
+            <li><a href="/agregar-producto/">Agregar Producto</a></li>
+            <li><a href="/buscar-productos/">Buscar Productos</a></li>
+            <li><a href="/agregar-cliente/">Agregar Cliente</a></li> <!-- Nuevo enlace -->
+            <!-- Puedes agregar más enlaces de navegación según sea necesario -->
+        </ul>
+    </nav>
+    <main>
+        <!-- Aquí se extenderán los bloques de contenido específicos de cada página -->
+        {% block content %}
+        {% endblock %}
+    </main>
+    <h1>Bienvenidos a nuestra Tienda de Ropa</h1>
+    <p>En nuestra tienda de ropa, nos dedicamos a ofrecer una amplia selección de prendas de vestir para hombres, mujeres y niños, diseñadas para satisfacer todos los estilos y necesidades. Desde elegantes conjuntos para ocasiones especiales hasta prendas casuales para el día a día, nuestra colección abarca desde lo clásico hasta lo más trendy.</p>
+    <p>Nos enorgullecemos de ofrecer productos de alta calidad, confeccionados con los mejores materiales y cuidando cada detalle para garantizar la satisfacción de nuestros clientes. Ya sea que estés buscando el outfit perfecto para una reunión importante, un evento social o simplemente para renovar tu guardarropa, nuestra tienda es tu destino para encontrar moda de calidad a precios accesibles.</p>
+    <p>Además, nuestro equipo de expertos en moda está siempre disponible para ofrecerte asesoramiento personalizado y ayudarte a encontrar las prendas que mejor se adapten a tu estilo y preferencias. En nuestra tienda, la moda se convierte en una experiencia única y emocionante, donde cada compra es una oportunidad para expresar tu personalidad y destacar tu estilo único.</p>
+    <p>¡Bienvenido a nuestra tienda de ropa, donde la moda cobra vida y la elegancia está al alcance de todos!</p>
+    <h2>Descubre las últimas tendencias en moda para hombres, mujeres y niños.</h2>
+    <p>Explora nuestra amplia selección de prendas de vestir, desde elegantes trajes hasta cómodos conjuntos casuales.</p>
+    <p>Encontrarás todo lo que necesitas para expresar tu estilo y personalidad, desde ropa de calle hasta outfits para ocasiones especiales.</p>
+    <p>¡No te pierdas nuestras ofertas especiales y promociones exclusivas!</p>
+    <h2>¡Encuentra las últimas tendencias en moda!</h2>
+    <center>
+    <img src="https://images.pexels.com/photos/5264914/pexels-photo-5264914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen de inicio">
+    </center>
+    <footer>
+        <!-- Aquí puedes incluir tu pie de página común -->
+        <p>2024 Tienda de Ropa. Todos los derechos reservados. &copy; {{ year }}</p>
+    </footer>
+</body>
+</html>

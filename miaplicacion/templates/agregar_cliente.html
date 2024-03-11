@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Inicio - Tienda de Ropa
+{% endblock %}
+
+{% block content %}
+    {{ block.super }} <!-- Incluye el contenido del bloque 'content' de la plantilla base -->
+
+    <h3>Agregar Cliente</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}
